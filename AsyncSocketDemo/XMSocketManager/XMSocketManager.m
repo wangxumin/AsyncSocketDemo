@@ -255,14 +255,9 @@
             if (data.length >=(num + 4)) {
                 data1 = [data subdataWithRange:NSMakeRange(4, num)];
                 Protocols * proto = [Protocols parseFromData:data1];
-                if (proto.type == 1) {
-                    NSLog(@"singleton===%@",proto);
-                }
-                NSLog(@"%@",self.delegate);
                 if (self.delegate && [self.delegate respondsToSelector:@selector(sendDataToViewcontroller:)]) {
                     [self.delegate sendDataToViewcontroller:proto];
                 }
-                [self.socket readDataWithTimeout:-1 tag:1];
                 data = [data subdataWithRange:NSMakeRange(num + 4, data.length - num - 4 )];
                 n++;
             }else{
