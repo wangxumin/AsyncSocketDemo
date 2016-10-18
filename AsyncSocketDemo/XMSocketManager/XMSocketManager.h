@@ -40,7 +40,7 @@ enum{
 {
    @public UInt64 _mobileID;
    @public UInt64 _watchID;
-    NSString *UUID;
+    
 }
 @property (nonatomic, weak) id delegate;
 @property (nonatomic, strong) AsyncSocket    *socket;       // socket
