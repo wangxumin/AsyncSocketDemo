@@ -1,14 +1,17 @@
 PODS:
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
+  - CocoaAsyncSocket (7.5.0):
+    - CocoaAsyncSocket/GCD (= 7.5.0)
+  - CocoaAsyncSocket/GCD (7.5.0)
+  - ProtocolBuffers (1.9.11)
 
 DEPENDENCIES:
-  - FMDB
+  - CocoaAsyncSocket
+  - ProtocolBuffers
 
 SPEC CHECKSUMS:
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
+  ProtocolBuffers: d509225eb2ea43d9582a59e94348fcf86e2abd65
 
-PODFILE CHECKSUM: d8ed4ce76ad40578e77002f89f9743a6f9b7da92
+PODFILE CHECKSUM: 4b7178b98dcdb501731e11e041358b23126bdce2
 
 COCOAPODS: 1.0.1

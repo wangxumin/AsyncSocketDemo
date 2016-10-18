@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "XMSocketManager.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self connectToserver];
+    
     return YES;
+}
+
+
+/**
+ 连接到服务器
+ */
+- (void)connectToserver{
+    if (![[XMSocketManager sharedInstance].socket isConnected]) {
+        [XMSocketManager sharedInstance].socketHost = @"socketHost";//服务器的host
+        [XMSocketManager sharedInstance].socketPort = 1111;//服务器端口
+        [[XMSocketManager sharedInstance] cutOffSocket];//为了避免重复连接时导致的崩溃，在调用连接方法时先手动断开一次
+        [[XMSocketManager sharedInstance] socketConnectHost];//连接到服务器
+    }
 }
 
 

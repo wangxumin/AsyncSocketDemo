@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "XMSocketManager.h"
+@interface ViewController ()<ProtocolsDelegate>
 
 @end
 
@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [XMSocketManager sharedInstance].delegate = self;
+}
+
+#pragma ========ProtocolsDelegate======
+- (void)sendDataToViewcontroller:(Protocols *)protocols{
+    
+    NSLog(@"====%@",protocols);
+    
 }
 
 
