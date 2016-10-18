@@ -3,7 +3,7 @@
 //  AsyncSocketDemo
 //
 //  Created by 王续敏 on 16/10/18.
-//  Copyright © 2016年 Ruanan. All rights reserved.
+//  Copyright © 2016年 王续敏. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    连接服务器
     [self connectToserver];
     
     return YES;
