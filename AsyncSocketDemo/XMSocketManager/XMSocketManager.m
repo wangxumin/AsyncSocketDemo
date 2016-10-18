@@ -202,6 +202,13 @@
 }
 
 
+/**
+ 收到数据回调
+
+ @param sock socket
+ @param data data
+ @param tag  tag
+ */
 -(void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
     @try {
