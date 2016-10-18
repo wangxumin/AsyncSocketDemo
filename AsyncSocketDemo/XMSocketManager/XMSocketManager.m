@@ -8,14 +8,6 @@
 
 #import "XMSocketManager.h"
 
-#import <sys/socket.h>
-
-#import <netinet/in.h>
-
-#import <arpa/inet.h>
-
-#import <unistd.h>
-
 #import "Appdelegate.h"
 
 @interface XMSocketManager()<AsyncSocketDelegate>
