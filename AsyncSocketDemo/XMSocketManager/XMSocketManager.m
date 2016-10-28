@@ -26,10 +26,8 @@
     static XMSocketManager *sharedInstace = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
         sharedInstace = [[XMSocketManager alloc] init];
     });
-    
     return sharedInstace;
 }
 
@@ -64,7 +62,7 @@
 {
     NSLog(@"=====%@",err);
 }
-// 连接成功回调
+
 #pragma mark  - 连接成功回调
 -(void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
 {
